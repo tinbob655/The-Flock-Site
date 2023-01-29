@@ -1,5 +1,5 @@
 body {
-    background-color: unset; /*replace unset with the site background color (as a hex code E.G #232324)*/
+    background-color: #222222;
     padding: 0;
     margin: 0;
     border: none;
@@ -10,39 +10,35 @@ body {
 }
 
 h1 {
-    font-family: helvetica;
-    font-size: unset; /*replace unset with the font size for headers (measured in px E.G 25px) */
-    color: unset; /*replace unset with the color for headers (as a hex code E.G. #232324) */
+    font-family: impact;
+    font-size: 70px;
+    color: #bcdfeb;
     text-align: center;
-    font-weight: unset; /*add a number between 100 and 900 to set the boldness of headers */
-    /*if you want me to add anything else to headers, write it here in caps */
+    font-weight: 500;
 }
 
 h2 {
-    font-family: helvetica;
-    font-size: unset; /*enter font size here for subheaders (measured in px E.G. 25px)*/
-    color: unset; /*enter the color for subheaders (as a hex code E.G #232324) */
+    font-family: cambria;
+    font-size: 40px;
+    color: #98a0a3;
     text-align: center;
-    font-weight: unset; /*enter the boldness of subheaders (number between 100 and 900) */
-    /*if you want me to add anything else to subheaders, write it here in caps */
+    font-weight: 400;
 }
 
 h3 {
-    font-family: helvetica;
-    font-size: unset; /*enter the size for links (measured in px E.G. 25px) */
-    color: unset; /*enter the color for links (as a hex code E.G #232324) */
+    font-family: verdana;
+    font-size: 25px;
+    color: #51737e;
     text-align: center;
-    font-weight: unset; /*enter the boldness of links (num between 100 and 900) */
-    /*if you want me to add anything else to links, write it here in caps */
+    font-weight: 400;
 }
 
 p {
-    font-family: helvetica;
-    font-size: unset; /*enter the font size for paragraphs (measured in px E.G 25px) */
-    color: unset; /*enter the color for paragraphs (as a hex code E.G. #232324) */
+    font-family: verdana;
+    font-size: 20px;
+    color: #4a7e8f;
     text-align: center;
-    font-weight: unset; /*enter the boldness of paragraphs (num between 100 and 900) */
-    /*if you want me to add anything else to paragraphs, write it here in caps */
+    font-weight: 300;
 }
 
 button {
@@ -66,6 +62,23 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+div#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+div.headerLink {
+    background-color: #333333;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+div.headerLink:hover {
+    background-color: #444444;
 }
 
 @keyframes fadin {
