@@ -1,0 +1,78 @@
+body {
+    background-color: unset; /*replace unset with the site background color (as a hex code E.G #232324)*/
+    padding: 0;
+    margin: 0;
+    border: none;
+    animation-name: fadin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+h1 {
+    font-family: helvetica;
+    font-size: unset; /*replace unset with the font size for headers (measured in px E.G 25px) */
+    color: unset; /*replace unset with the color for headers (as a hex code E.G. #232324) */
+    text-align: center;
+    font-weight: unset; /*add a number between 100 and 900 to set the boldness of headers */
+    /*if you want me to add anything else to headers, write it here in caps */
+}
+
+h2 {
+    font-family: helvetica;
+    font-size: unset; /*enter font size here for subheaders (measured in px E.G. 25px)*/
+    color: unset; /*enter the color for subheaders (as a hex code E.G #232324) */
+    text-align: center;
+    font-weight: unset; /*enter the boldness of subheaders (number between 100 and 900) */
+    /*if you want me to add anything else to subheaders, write it here in caps */
+}
+
+h3 {
+    font-family: helvetica;
+    font-size: unset; /*enter the size for links (measured in px E.G. 25px) */
+    color: unset; /*enter the color for links (as a hex code E.G #232324) */
+    text-align: center;
+    font-weight: unset; /*enter the boldness of links (num between 100 and 900) */
+    /*if you want me to add anything else to links, write it here in caps */
+}
+
+p {
+    font-family: helvetica;
+    font-size: unset; /*enter the font size for paragraphs (measured in px E.G 25px) */
+    color: unset; /*enter the color for paragraphs (as a hex code E.G. #232324) */
+    text-align: center;
+    font-weight: unset; /*enter the boldness of paragraphs (num between 100 and 900) */
+    /*if you want me to add anything else to paragraphs, write it here in caps */
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadin {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
