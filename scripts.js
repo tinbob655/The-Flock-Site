@@ -9,15 +9,17 @@ function DOMloaded() {
     const footer = document.getElementById('footer');
     loadHeader();
     loadFooter();
+    document.body.style.opacity = 1.0;
 };
 
 async function loadHeader() {
 
     //header logic
     const pageList = ['Home', 'Socials', 'Videos'];
-    let pageTitles = [];
     const initPageLinks = ['index.html', 'socials.html', 'videos.html'];
     let finPageLinks = [];
+    let pageTitles = [];
+    let headStyles = [];
     let headerHTML = '';
     let location = document.location.href;
     location = decodeURI(location.substring(location.lastIndexOf('/') +1));
@@ -30,9 +32,11 @@ async function loadHeader() {
         if (location != pageList[i]) {
             if (pageList[i] != 'Home') {
                 pageTitles.push(pageList[i]);
+                headStyles.push('');
             }
             else {
                 pageTitles.push('Home');
+                headStyles.push('style="color: #e6e670;"');
             };
             finPageLinks.push(initPageLinks[i]);
         };
@@ -43,11 +47,12 @@ async function loadHeader() {
     <table>
         <tr>`;
     for (let i = 0; i < pageList.length -1; i++) {
+        console.log(headStyles[i])
         headerHTML = headerHTML + `
             <td>
                 <div class="headerLink" style="width: 100%;">
                     <button onclick="change_page('`+finPageLinks[i]+`')" type="button">
-                        <h2>
+                        <h2 `+headStyles[i]+`>
                             `+pageTitles[i]+`
                         </h2>
                     </button>
