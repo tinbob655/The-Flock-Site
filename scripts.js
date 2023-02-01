@@ -58,9 +58,8 @@ async function loadHeader() {
     <table>
         <tr>`;
     for (let i = 0; i < pageList.length -1; i++) {
-        console.log(headStyles[i])
         headerHTML = headerHTML + `
-            <td>
+            <td style="width: `+100/finPageLinks.length+`%;">
                 <div class="headerLink" style="width: 100%;">
                     <button onclick="change_page('`+finPageLinks[i]+`')" type="button">
                         <h2 `+headStyles[i]+`>
