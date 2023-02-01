@@ -45,7 +45,7 @@ async function loadHeader() {
     for (let i = 0; i < pageList.length -1; i++) {
         headerHTML = headerHTML + `
             <td>
-                <div class="headerLink" style="width:`+String(100/pageTitles.length)+`vw;">
+                <div class="headerLink" style="width: 100%;">
                     <button onclick="change_page('`+finPageLinks[i]+`')" type="button">
                         <h2>
                             `+pageTitles[i]+`

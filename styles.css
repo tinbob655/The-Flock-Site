@@ -49,6 +49,7 @@ button {
     border: none;
     width: 100%;
     background-color: transparent;
+    display: block;
 }
 
 table {
@@ -70,10 +71,14 @@ img {
     margin-right: auto;
 }
 
+div {
+    padding: 0;
+    border: none;
+}
+
 div#content {
     background-color: transparent;
     width: 75%;
-    height: 100px;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -85,6 +90,7 @@ div#header {
     transition-duration: 0.3s;
     width: 100%;
     position: fixed;
+    display: block;
     top: 0;
     left: 0;
     max-height: 150px;
@@ -101,8 +107,10 @@ div.headerLink:hover {
 }
 
 div#footer {
-    width: 75%;
+    border-top: 5px double #343435;
     margin: auto;
+    padding-top: 10px;
+    width: 75%;
     opacity: 0.0;
     transition-property: opacity;
     transition-duration: 0.3s;
