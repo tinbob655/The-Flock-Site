@@ -106,6 +106,7 @@ div.headerLink:hover {
 div#footer {
     border-top: 5px double #343435;
     margin: auto;
+    margin-bottom: 10px;
     padding-top: 10px;
     width: 75%;
     opacity: 0.0;
