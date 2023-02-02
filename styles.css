@@ -26,18 +26,33 @@ h2 {
 
 h3 {
     font-family: verdana;
+    z-index: 1;
     font-size: 25px;
-    color: #51737e;
+    color: #3d5a64;
     text-align: center;
-    font-weight: 400;
+    text-decoration: none;
+    font-weight: 600;
+    transition-property: width height color;
+    transition-duration: 1s;
+}
+
+h3:hover {
+    color: #7fa8b6;
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 p {
     font-family: verdana;
     font-size: 20px;
-    color: #4a7e8f;
+    color: #6190a0;
     text-align: center;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 button {
@@ -53,19 +68,29 @@ table {
     width: 100%;
 }
 
-.link {
-    text-decoration: none;
-    color: inherit;
-}
-
 .rounded {
     border-radius: 50%;
+}
+
+.growWithHover {
+    transition-property: width height;
+    z-index: 1;
+    transition-duration: 1s;
+    margin-bottom: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+.growWithHover:hover {
+    transform: scale(1.1);
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 25vw;
+    max-height: 25vh;
 }
 
 div {
@@ -83,6 +108,7 @@ div#content {
 
 div#header {
     opacity: 0.0;
+    z-index: 10;
     transition-property: opacity;
     transition-duration: 0.3s;
     width: 100%;
@@ -121,7 +147,8 @@ div#footer {
 
 div.contentSection {
     border-top: #343435 5px double;
-    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 @keyframes fadin {
