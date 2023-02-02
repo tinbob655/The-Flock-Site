@@ -3,7 +3,8 @@ function init() {
     location = location.substring(location.lastIndexOf('/') +1);
     if (location == '') {
         document.location.href = 'index.html';
-    }
+        return(null);
+    };
 
     //if mobile user then redirect
     if (isMobile() == true) {
