@@ -119,6 +119,11 @@ div#footer {
     font-size: 15px;
 }
 
+div.contentSection {
+    border-top: #343435 5px double;
+    padding-top: 10px;
+}
+
 @keyframes fadin {
     from {
         opacity: 0.0;
