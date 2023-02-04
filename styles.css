@@ -137,7 +137,7 @@ div#footer {
     margin: auto;
     margin-bottom: calc(10px + var(--pxEnlargment));
     padding-top: calc(10px + var(--pxEnlargment));
-    width: 75%;
+    width: calc(80% + var(--percentageEnlargment));
     font-family: monospace;
     text-align: center;
     word-wrap: break-word;
