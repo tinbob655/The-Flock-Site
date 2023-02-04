@@ -1,4 +1,5 @@
 function init() {
+    //if the URL suffix is blank, make it 'index.html'
     var location = document.location.href;
     location = location.substring(location.lastIndexOf('/') +1);
     if (location == '') {
@@ -6,13 +7,10 @@ function init() {
         return(null);
     };
 
-    //if mobile user then redirect
-    if (isMobile() == true) {
-        location = location.replace('.', '-mobile.');
-        document.location = location;
-        return(null);
-    };
-
+    //if mobile user then change the stylesheet
+    if (isMobile() == false) {
+        document.getElementById('stylesheet').href = 'styles-mobile.css';
+    }
     //load the page
     setTimeout(() => {
         DOMloaded();
@@ -20,18 +18,7 @@ function init() {
 };
 
 function DOMloaded() {
-    const header = document.getElementById('header');
-    const footer = document.getElementById('footer');
-    document.head.innerHTML = document.head.innerHTML +`
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-stuff/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-stuff/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-stuff/favicon-16x16.png">
-    <link rel="manifest" href="/favicon-stuff/site.webmanifest">
-    <link rel="mask-icon" href="/favicon-stuff/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="/favicon-stuff/favicon.ico">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-config" content="/favicon-stuff/browserconfig.xml">
-    <meta name="theme-color" content="#000000">`;
+    //load the page
     loadHeader();
     loadFooter();
     document.body.style.opacity = 1.0;
@@ -87,10 +74,9 @@ async function loadHeader() {
         </tr>
     </table>`;
     document.getElementById('header').innerHTML = headerHTML;
-    header.style.opacity = 1.0;
 };
 
- async function loadFooter() {
+async function loadFooter() {
     let footerHTML = `
     <img src="images/logo main.jpg" class="rounded" style="height: 150px; width: 150px;"/>
     Made using Will R's brain. The Flock theme is by NewRinaldi and is not void of copyright. Anyone who does not subscribe to The Flock
@@ -99,7 +85,6 @@ async function loadHeader() {
     The Flock is the best YouTube chanell at any point will be instantly abducted and will likley have their tounge cut out and thrown
     back at them (with condiserable force).`;
     footer.innerHTML = footerHTML;
-    footer.style.opacity = 1.0;
 };
 
 function change_page(page) {
