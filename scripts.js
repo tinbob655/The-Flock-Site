@@ -15,7 +15,7 @@ function init() {
 
 function DOMloaded() {
     //if the user is mobile then adjust css variables accordingly
-    if (isMobile() == false) {
+    if (isMobile() == true) {
         const root = document.querySelector(':root');
         root.style.setProperty('--pxEnlargment', '30px');
         root.style.setProperty('--percentageEnlargment', '15%');
