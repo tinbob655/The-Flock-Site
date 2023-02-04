@@ -7,10 +7,6 @@ function init() {
         return(null);
     };
 
-    //if mobile user then change the stylesheet
-    if (isMobile() == false) {
-        document.getElementById('stylesheet').href = 'styles-mobile.css';
-    }
     //load the page
     setTimeout(() => {
         DOMloaded();
@@ -18,6 +14,15 @@ function init() {
 };
 
 function DOMloaded() {
+    //if the user is mobile then adjust css variables accordingly
+    if (isMobile() == false) {
+        const root = document.querySelector(':root');
+        root.style.setProperty('--pxEnlargment', '30px');
+        root.style.setProperty('--percentageEnlargment', '15%');
+        root.style.setProperty('--vwEnlargment', '20vw');
+        root.style.setProperty('--vhEnlargment', '20vh');
+    };
+
     //load the page
     loadHeader();
     loadFooter();

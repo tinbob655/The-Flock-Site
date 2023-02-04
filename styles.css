@@ -1,3 +1,10 @@
+:root {
+    --pxEnlargment: 0px;
+    --percentageEnlargment: 0%;
+    --vwEnlargment: 0vw;
+    --vhEnlargment: 0vh;
+}
+
 body {
     background-color: #222222;
     padding: 0;
@@ -10,7 +17,7 @@ body {
 
 h1 {
     font-family: impact;
-    font-size: 70px;
+    font-size: calc(70px + var(--pxEnlargment));
     color: #bcdfeb;
     text-align: center;
     font-weight: 500;
@@ -18,16 +25,18 @@ h1 {
 
 h2 {
     font-family: cambria;
-    font-size: 40px;
+    font-size: calc(40px + var(--pxEnlargment));
     color: #98a0a3;
     text-align: center;
     font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 h3 {
     font-family: verdana;
     z-index: 1;
-    font-size: 25px;
+    font-size: calc(25px + var(--pxEnlargment));
     color: #3d5a64;
     text-align: center;
     text-decoration: none;
@@ -43,7 +52,7 @@ h3:hover {
 
 p {
     font-family: verdana;
-    font-size: 20px;
+    font-size: calc(20px + var(--pxEnlargment));
     color: #6190a0;
     text-align: center;
     font-weight: 300;
@@ -88,8 +97,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 25vw;
-    max-height: 25vh;
+    max-width: calc(25vw + var(--vwEnlargment));
+    max-height: calc(25vh + var(--vhEnlargment));
 }
 
 div {
@@ -99,23 +108,18 @@ div {
 
 div#content {
     background-color: transparent;
-    width: 75%;
-    margin-top: 150px;
+    width: calc(75% + var(--percentageEnlargment));
+    margin-top: calc(150px + var(--pxEnlargment));
     margin-left: auto;
     margin-right: auto;
 }
 
 div#header {
-    opacity: 0.0;
     z-index: 10;
-    transition-property: opacity;
-    transition-duration: 0.3s;
     width: 100%;
     position: fixed;
-    display: block;
     top: 0;
     left: 0;
-    max-height: 150px;
 }
 
 div.headerLink {
@@ -129,25 +133,22 @@ div.headerLink:hover {
 }
 
 div#footer {
-    border-top: 5px double #343435;
+    border-top: calc(5px + var(--pxEnlargment)) double #343435;
     margin: auto;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    margin-bottom: calc(10px + var(--pxEnlargment));
+    padding-top: calc(10px + var(--pxEnlargment));
     width: 75%;
-    opacity: 0.0;
-    transition-property: opacity;
-    transition-duration: 0.3s;
     font-family: monospace;
     text-align: center;
     word-wrap: break-word;
     color: #6e6e6e;
-    font-size: 15px;
+    font-size: calc(15px + var(--pxEnlargment));
 }
 
 div.contentSection {
-    border-top: #343435 5px double;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    border-top: #343435 calc(5px + var(--pxEnlargment)) double;
+    margin-top: calc(10px + var(--pxEnlargment));
+    margin-bottom: calc(15px + var(--pxEnlargment));
 }
 
 @keyframes fadin {
