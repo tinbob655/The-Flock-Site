@@ -19,7 +19,7 @@
     </head>
     <body>
         <div id="header"></div>
-        <table style="margin-top: 100px;">
+        <table style="margin-top: calc(100px + var(--pxEnlargment));">
             <tr>
                 <td style="width: 50%;">
                     <p>
@@ -35,22 +35,26 @@
                 </td>
             </tr>
         </table>
-        <div id="content" style="margin-top: 10px;">
+        <div id="content">
             <h1>
                 The Flock Official
             </h1>
-            <h2 style="border-top: 5px double #343435;">
-                The Flock?
-            </h2>
-            <p>
-                We're The Flock. The greatest YouTube channel ever created. We brought to you videos like Karl Marx Vs Ben Shapiro in WWE.
-            </p>
-            <h2 style="border-top: 5px double #343435;">
-                Subscribe
-            </h2>
-            <p>
-                If you don't subscribe to The Flock's channel, you will be shot.
-            </p>
+            <div class="contentSection">
+                <h2>
+                    The Flock?
+                </h2>
+                <p>
+                    We're The Flock. The greatest YouTube channel ever created. We brought to you videos like Karl Marx Vs Ben Shapiro in WWE.
+                </p>
+            </div>
+            <div class="contentSection">
+                <h2>
+                    Subscribe
+                </h2>
+                <p>
+                    If you don't subscribe to The Flock's channel, you will be shot.
+                </p>
+            </div>
         </div>
         <div id="footer"></div>
     </body>

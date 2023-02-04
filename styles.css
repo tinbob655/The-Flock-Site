@@ -109,7 +109,7 @@ div {
 div#content {
     background-color: transparent;
     width: calc(75% + var(--percentageEnlargment));
-    margin-top: calc(150px + var(--pxEnlargment));
+    margin-top: calc(110px + var(--pxEnlargment));
     margin-left: auto;
     margin-right: auto;
 }
