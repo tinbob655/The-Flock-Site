@@ -101,6 +101,16 @@ img {
     max-height: calc(25vh + var(--vhEnlargment));
 }
 
+iframe {
+    width: calc(67.5vw + var(--vwEnlargment));
+    height: calc(((67.5vw + var(--vwEnlargment)) / 16) * 9);   /*exactly 16:9 ratio for youtube embeds*/
+    margin: auto;
+    display: block;
+    padding: 0;
+    border-radius: calc(30px + var(--pxEnlargment));
+    border: 5px double #343435;
+}
+
 div {
     padding: 0;
     border: none;
@@ -147,7 +157,7 @@ div#footer {
 
 div.contentSection {
     border-top: #343435 calc(5px + var(--pxEnlargment)) double;
-    margin-top: calc(10px + var(--pxEnlargment));
+    margin-top: calc(20px + var(--pxEnlargment));
     margin-bottom: calc(15px + var(--pxEnlargment));
 }
 
